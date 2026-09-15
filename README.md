@@ -16,7 +16,7 @@
 </div>
 
 ---
-
+live link: https://creditcardfrauddetection-kaxvftcn3sqojqb7zt6dvx.streamlit.app/
 ## 📌 Problem Overview
 In real-world fraud detection, **accuracy is a dangerous illusion**. Because **99.83%** of transactions are legitimate, a naive model that predicts "always legit" achieves 99.83% accuracy while catching zero frauds.
 
