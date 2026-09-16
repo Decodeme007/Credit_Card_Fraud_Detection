@@ -1,13 +1,7 @@
 <div align="center">
 
-# 💳 Credit Card Fraud Detection Platform
+#  Credit Card Fraud Detection Platform
 ### Cost-Sensitive Machine Learning Pipeline & Interactive Streamlit Dashboard
-
-[![Python](https://img.shields.io/badge/Python-3.10%2B-blue.svg?logo=python&logoColor=white)](https://www.python.org/)
-[![Streamlit](https://img.shields.io/badge/Streamlit-App-FF4B4B.svg?logo=streamlit&logoColor=white)](https://streamlit.io/)
-[![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-ML-F7931E.svg?logo=scikit-learn&logoColor=white)](https://scikit-learn.org/)
-[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-brightgreen.svg)]()
 
 <p align="center">
   <b>A complete, leak-free machine learning system for detecting financial fraud on extreme class-imbalanced data (0.17% fraud rate), featuring cost-sensitive tree ensembles, optimal threshold calibration, and a live web application.</b>
@@ -17,7 +11,7 @@
 
 ---
 live link: https://creditcardfrauddetection-kaxvftcn3sqojqb7zt6dvx.streamlit.app/
-## 📌 Problem Overview
+##  Problem Overview
 In real-world fraud detection, **accuracy is a dangerous illusion**. Because **99.83%** of transactions are legitimate, a naive model that predicts "always legit" achieves 99.83% accuracy while catching zero frauds.
 
 Furthermore, naive undersampling discards **99.8%** of legitimate transaction variance and causes thousands of false alarms in production.
@@ -26,7 +20,7 @@ This project implements a **leak-free, production-oriented pipeline** evaluated 
 
 ---
 
-## 🏗️ System Architecture
+##  System Architecture
 
 ```mermaid
 flowchart TD
@@ -44,35 +38,12 @@ flowchart TD
     I --> J[Streamlit Interactive App]
     C --> J
     
-    J --> K[📁 Option 1: Batch CSV Prediction]
-    J --> L[✍️ Option 2: Single Manual Scoring V1-V28]
+    J --> K[ Option 1: Batch CSV Prediction]
+    J --> L[ Option 2: Single Manual Scoring V1-V28]
 ```
 
----
 
-## 🚀 Key Features in the Streamlit Web App
-
-The application (`app.py`) provides two dedicated user modes:
-
-### 📁 Option 1: Batch CSV Upload
-* **Upload Custom Files:** Drag-and-drop any CSV transaction file to get instant predictions.
-* **Built-in Quick Test:** Download or load 50 verified sample transactions with a single click (`sample_test_transactions.csv`).
-* **KPI Dashboard:** Displays Total Transactions, Approved Count, Flagged Frauds, and Fraud Rate %.
-* **Ground Truth Verification:** If actual labels are present, automatically computes match rate, caught frauds, and false alarms.
-* **Exportable Results:** Download an annotated CSV with predicted probabilities and risk tags.
-
-### ✍️ Option 2: Manual Transaction Scoring
-* **Comprehensive Input Form:** Input **Amount ($)**, **Time (seconds)**, and all **28 PCA features (`V1` to `V28`)** in a clean 4-column layout.
-* **1-Click Presets:**
-  * 🟢 *Pre-fill Sample Legitimate Transaction*
-  * 🔴 *Pre-fill Sample Fraudulent Transaction*
-  * 🔄 *Reset All to Zero*
-* **Real-time Verdict Badge:** Instant **APPROVED** or **FRAUDULENT DETECTED** status with probability percentage and risk level.
-* **Benchmark Comparison:** Compares inputs against typical benchmark values for top discriminators ($V_{14}, V_4, V_{10}, V_{12}, V_{11}, V_{17}$).
-
----
-
-## 📊 Benchmark Scoreboard (56,962 Untouched Test Transactions)
+##  Benchmark Scoreboard (56,962 Untouched Test Transactions)
 
 | Architecture | PR-AUC (Avg Precision) | ROC-AUC | Recall (Fraud Caught) | Precision (Alarm Accuracy) | F1-Score | False Alarms (Legit Blocked) | Missed Frauds (FN) |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
@@ -85,13 +56,13 @@ The application (`app.py`) provides two dedicated user modes:
 
 ---
 
-## 💰 Financial Cost Optimization (Threshold Calibration)
+##  Financial Cost Optimization (Threshold Calibration)
 * **Default 0.50 Cutoff:** Misses 18 frauds and incurs \$2,235 in costs.
 * **Calibrated 0.25 Cutoff:** Lowers financial loss to **\$1,695** (saving **\$540** per 56k transactions), increasing fraud catch rate from **81.6% to 87.8%** with minimal customer friction.
 
 ---
 
-## 📂 Project Repository Structure
+## Project Repository Structure
 
 ```text
 Credit_Card_Fraud_Detection/
@@ -109,7 +80,7 @@ Credit_Card_Fraud_Detection/
 
 ---
 
-## ⚡ Quickstart Guide
+## Quickstart Guide
 
 ### 1. Clone the Repository
 ```bash
@@ -134,7 +105,7 @@ python train.py
 
 ---
 
-## 💼 Bullet Points for Your Resume
+## Bullet Points for Your Resume
 
 ```text
 Credit Card Fraud Detection Platform | Python, Scikit-Learn, Streamlit
@@ -146,6 +117,3 @@ Credit Card Fraud Detection Platform | Python, Scikit-Learn, Streamlit
 
 ---
 
-<div align="center">
-  <sub>Built with ❤️ using Python, Scikit-Learn, and Streamlit.</sub>
-</div>
